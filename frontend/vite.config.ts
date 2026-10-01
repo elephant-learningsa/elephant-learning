@@ -23,6 +23,7 @@ import oxlint from 'vite-plugin-oxlint'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  base: '/elephant-learning/',
   plugins: [
     react(),
     tailwindcss(),
