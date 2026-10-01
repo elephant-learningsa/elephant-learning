@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@keyframes waterSlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(25px, -15px) scale(1.05);
+  }
+  50% {
+    transform: translate(5px, 20px) scale(0.98);
+  }
+  75% {
+    transform: translate(-20px, 5px) scale(1.03);
+  }
+}
+
+@keyframes waterMedium {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, -25px) rotate(8deg);
+  }
+}
+
+@keyframes waterFast {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 15px) scale(1.08);
+  }
+}
+
+.animate-water-slow {
+  animation: waterSlow 12s ease-in-out infinite;
+}
+
+.animate-water-medium {
+  animation: waterMedium 9s ease-in-out infinite;
+}
+
+.animate-water-fast {
+  animation: waterFast 7s ease-in-out infinite;
+}
