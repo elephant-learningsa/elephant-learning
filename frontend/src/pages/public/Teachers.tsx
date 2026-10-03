@@ -175,7 +175,7 @@ export default function ForTeachers() {
 
               <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Build Your Teaching Career With{" "}
-                <span className="text-[#D4AF37]">Elephant Learning</span>
+                <span className="text-[#F7F8F9]">Elephant Learning</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
@@ -187,7 +187,7 @@ export default function ForTeachers() {
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link
                   to="/teacher/register"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-7 py-4 font-semibold text-[#0B1F3A] transition duration-300 hover:bg-[#e6c45c]"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#DCE0E3] px-7 py-4 font-semibold text-[#0B1F3A] transition duration-300 hover:text-[#DCE0E3] hover:bg-[#5B6067]"
                 >
                   Join Our Teacher Network
                   <ArrowRight
@@ -198,7 +198,7 @@ export default function ForTeachers() {
 
                 <a
                   href="#process"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition duration-300 hover:border-[#D4AF37] hover:bg-white/5"
+                  className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition duration-300 hover:border-[#5B6067] hover:bg-white/5"
                 >
                   View the Process
                 </a>

@@ -5,12 +5,10 @@ import logo from "../assets/Logo/Logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
+    { label: "For Educators", path: "/teachers" },
    { label: "For Schools", path: "/schools" },
-  { label: "For Educators", path: "/teachers" },
- 
    { label: "About", path: "/about" },
-
- 
+   { label: "Resources", path: "/resources" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -62,7 +60,7 @@ export default function Navbar() {
           {/* Join Our Talent Pool */}
           <Link
             to="/teacher/register"
-            className="rounded-full bg-[#D4AF37] px-6 py-3 text-sm font-semibold tracking-wide text-[#0B1F3A] transition hover:bg-[#e1c45a]"
+            className="rounded-full bg-[#DCE0E3] px-6 py-3 text-sm font-semibold tracking-wide text-[#0B1F3A] hover:text-[#F7F8F9] transition hover:bg-[#5B6067]"
           >
             Join Our Talent Pool
           </Link>

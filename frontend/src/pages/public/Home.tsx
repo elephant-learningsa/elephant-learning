@@ -1,4 +1,4 @@
-import elephantHero from "../../assets/Logo/Logo.png";
+import elephantHero from "../../assets/images/homeimage.png";
 
 import {
   ArrowRight,
@@ -206,19 +206,18 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
 
                 <Link
-                  to="/schools"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0B1F3A] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:bg-[#132F4C]"
-                >
-                  <School className="h-5 w-5" />
-                  I'm a School
-                </Link>
-
-                <Link
                   to="/teacher/register"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#0B1F3A]/25 bg-white px-7 py-4 font-semibold text-[#0B1F3A] transition duration-300 hover:border-[#1F5EA8] hover:text-[#1F5EA8]"
                 >
                   <Users className="h-5 w-5" />
                   I'm an Educator
+                </Link>
+                <Link
+                  to="/schools"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0B1F3A] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:bg-[#132F4C]"
+                >
+                  <School className="h-5 w-5" />
+                  I'm a School
                 </Link>
 
               </div>
