@@ -103,7 +103,7 @@ export default function Navbar() {
             <Link
               to="/teacher/register"
               onClick={closeMobileMenu}
-              className="mt-5 rounded-full bg-[#D4AF37] px-6 py-4 text-center text-sm font-semibold tracking-wide text-[#0B1F3A] transition hover:bg-[#e1c45a]"
+              className="mt-5 rounded-full bg-[#DCE0E3] px-6 py-4 text-center text-sm font-semibold tracking-wide text-[#0B1F3A] transition hover:bg-[#e1c45a]"
             >
               Join Our Talent Pool
             </Link>

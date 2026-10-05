@@ -41,68 +41,102 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center border border-white/10 text-xs font-semibold tracking-wide text-white/70 transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
+                className="flex h-10 w-10 items-center justify-center border border-white/10 text-xs font-semibold tracking-wide text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
               >
-                in
+                li
               </a>
 
               <a
                 href="#"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center border border-white/10 text-sm font-semibold text-white/70 transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
+                className="flex h-10 w-10 items-center justify-center border border-white/10 text-sm font-semibold text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
               >
                 f
+              </a>
+              
+               <a
+                href="#"
+                aria-label="Instagram"
+                className="flex h-10 w-10 items-center justify-center border border-white/10 text-sm font-semibold text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
+              >
+                in
+              </a>
+               <a
+                href="#"
+                aria-label="X"
+                className="flex h-10 w-10 items-center justify-center border border-white/10 text-sm font-semibold text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
+              >
+                x
               </a>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DCE0E3]">
               Navigation
             </h3>
 
             <div className="mt-6 flex flex-col gap-4">
               <Link
                 to="/"
-                className="text-sm text-white/65 transition hover:text-[#D4AF37]"
+                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
               >
                 Home
               </Link>
 
               <Link
                 to="/about"
-                className="text-sm text-white/65 transition hover:text-[#D4AF37]"
+                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
               >
                 About Us
               </Link>
 
               <Link
                 to="/contact"
-                className="text-sm text-white/65 transition hover:text-[#D4AF37]"
+                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
               >
                 Contact
+              </Link>
+
+              <Link
+                to="/teachers"
+                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+              >
+                For Educators
+              </Link>
+              <Link
+                to="/schools"
+                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+              >
+                For School
+              </Link>
+              <Link
+                to="/resources"
+                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+              >
+                Resources
               </Link>
             </div>
           </div>
 
           {/* For Educators */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DCE0E3]">
               For Educators
             </h3>
 
             <div className="mt-6 flex flex-col gap-4">
               <Link
                 to="/teacher/register"
-                className="text-sm text-white/65 transition hover:text-[#D4AF37]"
+                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
               >
                 Register as an Educator
               </Link>
 
               <Link
                 to="/teacher/register"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#D4AF37] transition hover:text-white"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#DCE0E3] transition hover:text-white"
               >
                 Join Our Talent Pool
                 <ArrowUpRight size={16} />
@@ -112,7 +146,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DCE0E3]">
               Contact Us
             </h3>
 
@@ -122,7 +156,7 @@ export default function Footer() {
               <div className="flex gap-3 text-sm leading-6 text-white/65">
                 <MapPin
                   size={18}
-                  className="mt-1 shrink-0 text-[#D4AF37]"
+                  className="mt-1 shrink-0 text-[#DCE0E3]"
                 />
 
                 <span>{BUSINESS_ADDRESS}</span>
@@ -131,11 +165,11 @@ export default function Footer() {
               {/* Phone */}
               <a
                 href={`tel:${BUSINESS_PHONE.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 text-sm text-white/65 transition hover:text-[#D4AF37]"
+                className="flex items-center gap-3 text-sm text-white/65 transition hover:text-[#DCE0E3]"
               >
                 <Phone
                   size={18}
-                  className="text-[#D4AF37]"
+                  className="text-[#DCE0E3]"
                 />
 
                 <span>{BUSINESS_PHONE}</span>
@@ -144,11 +178,11 @@ export default function Footer() {
               {/* Email */}
               <a
                 href={`mailto:${BUSINESS_EMAIL}`}
-                className="flex items-center gap-3 text-sm text-white/65 transition hover:text-[#D4AF37]"
+                className="flex items-center gap-3 text-sm text-white/65 transition hover:text-[#DCE0E3]"
               >
                 <Mail
                   size={18}
-                  className="text-[#D4AF37]"
+                  className="text-[#DCE0E3]"
                 />
 
                 <span>{BUSINESS_EMAIL}</span>

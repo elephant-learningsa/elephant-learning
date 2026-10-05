@@ -6,20 +6,35 @@ from .models import User
 
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
+    ordering = ("email",)
+
     fieldsets = UserAdmin.fieldsets + (
-        ("Elephant Learning", {
-            "fields": ("role",),
-        }),
+        (
+            "Elephant Learning",
+            {
+                "fields": ("role",),
+            },
+        ),
     )
 
-    add_fieldsets = UserAdmin.add_fieldsets + (
-        ("Elephant Learning", {
-            "fields": ("email", "role"),
-        }),
+    add_fieldsets = (
+        (
+            None,
+            {
+                "classes": ("wide",),
+                "fields": (
+                    "email",
+                    "first_name",
+                    "last_name",
+                    "role",
+                    "password1",
+                    "password2",
+                ),
+            },
+        ),
     )
 
     list_display = (
-        "username",
         "email",
         "first_name",
         "last_name",
@@ -35,8 +50,8 @@ class CustomUserAdmin(UserAdmin):
     )
 
     search_fields = (
-        "username",
         "email",
         "first_name",
         "last_name",
     )
+
