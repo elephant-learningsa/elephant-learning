@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   Bell,
-  BookOpen,
   BriefcaseBusiness,
   Building2,
   CalendarDays,
