@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Join Our Talent Pool */}
           <Link
             to="/teacher/register"
-            className="rounded-full bg-[#DCE0E3] px-6 py-3 text-sm font-semibold tracking-wide text-[#0B1F3A] hover:text-[#F7F8F9] transition hover:bg-[#5B6067]"
+            className="rounded-full bg-[#1B3A5C] px-6 py-3 text-sm font-semibold tracking-wide text-[#F7F8F9] hover:text-[#F7F8F9] transition hover:bg-[#5B6067]"
           >
             Join Our Talent Pool
           </Link>
@@ -103,7 +103,7 @@ export default function Navbar() {
             <Link
               to="/teacher/register"
               onClick={closeMobileMenu}
-              className="mt-5 rounded-full bg-[#DCE0E3] px-6 py-4 text-center text-sm font-semibold tracking-wide text-[#0B1F3A] transition hover:bg-[#e1c45a]"
+              className="mt-5 rounded-full bg-[#1B3A5C] px-6 py-4 text-center text-sm font-semibold tracking-wide text-[#F7F8F9] transition hover:bg-[#e1c45a]"
             >
               Join Our Talent Pool
             </Link>

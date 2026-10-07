@@ -143,3 +143,82 @@ class TeacherProfileSerializer(serializers.ModelSerializer):
         instance.save()
 
         return instance
+
+
+class AdminEducatorSerializer(serializers.ModelSerializer):
+    profile = serializers.SerializerMethodField()
+    profile_completion = serializers.SerializerMethodField()
+    full_name = serializers.SerializerMethodField()
+
+    class Meta:
+        model = User
+        fields = [
+            "id",
+            "full_name",
+            "first_name",
+            "last_name",
+            "email",
+            "role",
+            "date_joined",
+            "profile",
+            "profile_completion",
+        ]
+
+    def get_full_name(self, obj):
+        full_name = obj.get_full_name().strip()
+
+        return full_name or obj.email
+
+    def get_profile(self, obj):
+        try:
+            profile = obj.teacher_profile
+        except TeacherProfile.DoesNotExist:
+            return None
+
+        return {
+            "phone": profile.phone,
+            "location": profile.location,
+            "province": profile.province,
+            "highest_qualification": profile.highest_qualification,
+            "institution": profile.institution,
+            "field_of_study": profile.field_of_study,
+            "years_of_experience": profile.years_of_experience,
+            "subjects": profile.subjects,
+            "grade_levels": profile.grade_levels,
+            "employment_type": profile.employment_type,
+            "preferred_location": profile.preferred_location,
+            "willing_to_relocate": profile.willing_to_relocate,
+            "bio": profile.bio,
+        }
+
+    def get_profile_completion(self, obj):
+        try:
+            profile = obj.teacher_profile
+        except TeacherProfile.DoesNotExist:
+            return 0
+
+        completed_fields = 0
+        total_fields = 12
+
+        required_fields = [
+            obj.first_name,
+            obj.last_name,
+            profile.phone,
+            profile.location,
+            profile.province,
+            profile.highest_qualification,
+            profile.institution,
+            profile.field_of_study,
+            profile.subjects,
+            profile.grade_levels,
+            profile.employment_type,
+            profile.preferred_location,
+        ]
+
+        for value in required_fields:
+            if value and str(value).strip():
+                completed_fields += 1
+
+        return round(
+            (completed_fields / total_fields) * 100
+        )

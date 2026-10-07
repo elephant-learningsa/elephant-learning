@@ -1,18 +1,23 @@
 import { useState } from "react";
 import {
   Bell,
+  BookOpen,
   BriefcaseBusiness,
+  Building2,
   CalendarDays,
   ChevronDown,
+  ClipboardList,
+  FileCheck,
   FileText,
   LayoutDashboard,
   LogOut,
   Menu,
   MessageSquare,
+  BarChart3,
   Settings,
+  Users,
   UserRound,
   X,
-  BookOpen,
 } from "lucide-react";
 import {
   Link,
@@ -31,41 +36,98 @@ interface StoredUser {
   role?: string;
 }
 
-const navigationItems = [
+const mainNavigation = [
   {
     label: "Dashboard",
-    path: "/teacher/dashboard",
+    path: "/admin/dashboard",
     icon: LayoutDashboard,
   },
+];
+
+const educatorNavigation = [
   {
-    label: "My Profile",
-    path: "/teacher/profile",
-    icon: UserRound,
+    label: "All Educators",
+    path: "/admin/educators",
+    icon: Users,
   },
   {
-    label: "Job Opportunities",
-    path: "/teacher/opportunities",
+    label: "Pending Reviews",
+    path: "/admin/educators/pending",
+    icon: ClipboardList,
+  },
+  {
+    label: "Verification",
+    path: "/admin/educators/verification",
+    icon: FileCheck,
+  },
+  {
+    label: "Talent Pool",
+    path: "/admin/educators/talent-pool",
+    icon: UserRound,
+  },
+];
+
+const schoolNavigation = [
+  {
+    label: "All Schools",
+    path: "/admin/schools",
+    icon: Building2,
+  },
+  {
+    label: "Pending Requests",
+    path: "/admin/schools/pending",
+    icon: ClipboardList,
+  },
+  {
+    label: "School Profiles",
+    path: "/admin/schools/profiles",
+    icon: Building2,
+  },
+];
+
+const recruitmentNavigation = [
+  {
+    label: "Vacancies",
+    path: "/admin/recruitment/vacancies",
     icon: BriefcaseBusiness,
   },
   {
-    label: "Applications",
-    path: "/teacher/applications",
-    icon: FileText,
+    label: "Matching",
+    path: "/admin/recruitment/matching",
+    icon: Users,
   },
   {
-    label: "Messages",
-    path: "/teacher/messages",
-    icon: MessageSquare,
-  },
-  {
-    label: "My Availability",
-    path: "/teacher/availability",
+    label: "Interviews",
+    path: "/admin/recruitment/interviews",
     icon: CalendarDays,
   },
   {
-    label: "Resources",
-    path: "/resources",
-    icon: BookOpen,
+    label: "Placements",
+    path: "/admin/recruitment/placements",
+    icon: BriefcaseBusiness,
+  },
+];
+
+const managementNavigation = [
+  {
+    label: "Applications",
+    path: "/admin/applications",
+    icon: FileText,
+  },
+  {
+    label: "Documents",
+    path: "/admin/documents",
+    icon: FileCheck,
+  },
+  {
+    label: "Messages",
+    path: "/admin/messages",
+    icon: MessageSquare,
+  },
+  {
+    label: "Reports",
+    path: "/admin/reports",
+    icon: BarChart3,
   },
 ];
 
@@ -85,18 +147,16 @@ function getStoredUser(): StoredUser | null {
   }
 }
 
-export default function TeacherDashboardLayout() {
+export default function AdminDashboardLayout() {
   const navigate = useNavigate();
 
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const [profileOpen, setProfileOpen] =
-    useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
 
   const user = getStoredUser();
 
   const firstName =
-    user?.first_name?.trim() || "Teacher";
+    user?.first_name?.trim() || "Administrator";
 
   const lastName =
     user?.last_name?.trim() || "";
@@ -120,21 +180,50 @@ export default function TeacherDashboardLayout() {
     navigate("/login", { replace: true });
   };
 
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+  };
+
+  const renderNavigation = (
+    items: typeof mainNavigation,
+  ) => {
+    return items.map((item) => {
+      const Icon = item.icon;
+
+      return (
+        <NavLink
+          key={item.path}
+          to={item.path}
+          onClick={closeMobileMenu}
+          className={({ isActive }) =>
+            `flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium transition ${
+              isActive
+                ? "bg-[#1769c2] text-white shadow-sm"
+                : "text-white/80 hover:bg-white/10 hover:text-white"
+            }`
+          }
+        >
+          <Icon size={19} />
+          <span>{item.label}</span>
+        </NavLink>
+      );
+    });
+  };
+
   return (
     <div className="min-h-screen bg-[#f7f9fc]">
-      {/* Mobile overlay */}
       {mobileOpen && (
         <button
           type="button"
           aria-label="Close navigation"
           className="fixed inset-0 z-40 bg-black/40 lg:hidden"
-          onClick={() => setMobileOpen(false)}
+          onClick={closeMobileMenu}
         />
       )}
 
       {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 flex w-[260px] flex-col bg-[#0B1F3A] transition-transform duration-200 lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 flex w-[270px] flex-col bg-[#0B1F3A] transition-transform duration-200 lg:translate-x-0 ${
           mobileOpen
             ? "translate-x-0"
             : "-translate-x-full"
@@ -143,66 +232,65 @@ export default function TeacherDashboardLayout() {
         {/* Logo */}
         <div className="flex h-24 items-center px-6">
           <Link
-            to="/teacher/dashboard"
-            onClick={() => setMobileOpen(false)}
-            className="block"
+            to="/admin/dashboard"
+            onClick={closeMobileMenu}
           >
             <img
               src={logo}
               alt="Elephant Learning"
-              className="h-auto w-[190px] object-contain"
+              className="w-[185px] object-contain"
             />
           </Link>
 
           <button
             type="button"
             className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-white/80 hover:bg-white/10 lg:hidden"
-            onClick={() => setMobileOpen(false)}
+            onClick={closeMobileMenu}
           >
             <X size={20} />
           </button>
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto px-4 py-4">
-          <div className="space-y-1.5">
-            {navigationItems.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setMobileOpen(false)}
-                  className={({ isActive }) =>
-                    `flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition ${
-                      isActive
-                        ? "bg-[#1769c2] text-white shadow-sm"
-                        : "text-white/80 hover:bg-white/10 hover:text-white"
-                    }`
-                  }
-                >
-                  <Icon size={20} />
-                  <span>{item.label}</span>
-                </NavLink>
-              );
-            })}
+        <nav className="flex-1 overflow-y-auto px-4 pb-6">
+          <div className="space-y-1">
+            {renderNavigation(mainNavigation)}
           </div>
+
+          {/* Educators */}
+          <NavigationSection title="Educators">
+            {renderNavigation(educatorNavigation)}
+          </NavigationSection>
+
+          {/* Schools */}
+          <NavigationSection title="Schools">
+            {renderNavigation(schoolNavigation)}
+          </NavigationSection>
+
+          {/* Recruitment */}
+          <NavigationSection title="Recruitment">
+            {renderNavigation(recruitmentNavigation)}
+          </NavigationSection>
+
+          {/* Management */}
+          <NavigationSection title="Management">
+            {renderNavigation(managementNavigation)}
+          </NavigationSection>
 
           <div className="my-5 border-t border-white/10" />
 
           <NavLink
-            to="/teacher/settings"
-            onClick={() => setMobileOpen(false)}
+            to="/admin/settings"
+            onClick={closeMobileMenu}
             className={({ isActive }) =>
-              `flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition ${
+              `flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium transition ${
                 isActive
                   ? "bg-[#1769c2] text-white"
                   : "text-white/80 hover:bg-white/10 hover:text-white"
               }`
             }
           >
-            <Settings size={20} />
+            <Settings size={19} />
             <span>Settings</span>
           </NavLink>
         </nav>
@@ -214,15 +302,15 @@ export default function TeacherDashboardLayout() {
             onClick={logout}
             className="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-white/85 transition hover:bg-white/10 hover:text-white"
           >
-            <LogOut size={20} />
+            <LogOut size={19} />
             <span>Log Out</span>
           </button>
         </div>
       </aside>
 
       {/* Main */}
-      <div className="lg:pl-[260px]">
-        {/* Top header */}
+      <div className="lg:pl-[270px]">
+        {/* Header */}
         <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
           <div className="flex h-[72px] items-center justify-between px-4 sm:px-6 lg:px-8">
             <button
@@ -238,38 +326,38 @@ export default function TeacherDashboardLayout() {
               <button
                 type="button"
                 onClick={() =>
-                  navigate("/teacher/notifications")
+                  navigate("/admin/notifications")
                 }
-                className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-[#0B1F3A] transition hover:bg-slate-50"
+                className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-[#0B1F3A] hover:bg-slate-50"
                 aria-label="Notifications"
               >
                 <Bell size={19} />
 
                 <span className="absolute right-1.5 top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#1769c2] px-1 text-[10px] font-bold text-white">
-                  3
+                  0
                 </span>
               </button>
 
-              {/* Profile dropdown */}
+              {/* Admin profile */}
               <div className="relative">
                 <button
                   type="button"
                   onClick={() =>
                     setProfileOpen((open) => !open)
                   }
-                  className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-2.5 py-1.5 transition hover:bg-slate-50"
+                  className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-2.5 py-1.5 hover:bg-slate-50"
                 >
                   <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eaf2fb] text-xs font-bold text-[#0B1F3A]">
-                    {initials || "T"}
+                    {initials || "A"}
                   </div>
 
                   <div className="hidden text-left sm:block">
-                    <p className="max-w-[130px] truncate text-sm font-semibold text-[#0B1F3A]">
+                    <p className="max-w-[150px] truncate text-sm font-semibold text-[#0B1F3A]">
                       {fullName}
                     </p>
 
                     <p className="text-xs text-slate-500">
-                      Teacher
+                      Administrator
                     </p>
                   </div>
 
@@ -282,18 +370,7 @@ export default function TeacherDashboardLayout() {
                 {profileOpen && (
                   <div className="absolute right-0 top-14 w-52 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg">
                     <Link
-                      to="/teacher/profile"
-                      onClick={() =>
-                        setProfileOpen(false)
-                      }
-                      className="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 hover:bg-slate-50"
-                    >
-                      <UserRound size={17} />
-                      My Profile
-                    </Link>
-
-                    <Link
-                      to="/teacher/settings"
+                      to="/admin/settings"
                       onClick={() =>
                         setProfileOpen(false)
                       }
@@ -320,10 +397,29 @@ export default function TeacherDashboardLayout() {
           </div>
         </header>
 
-        {/* Page content */}
         <main>
           <Outlet />
         </main>
+      </div>
+    </div>
+  );
+}
+
+function NavigationSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="mt-5">
+      <p className="mb-2 px-4 text-[10px] font-bold uppercase tracking-[0.16em] text-white/40">
+        {title}
+      </p>
+
+      <div className="space-y-1">
+        {children}
       </div>
     </div>
   );

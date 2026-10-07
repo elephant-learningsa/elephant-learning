@@ -25,12 +25,12 @@ export default function Contact() {
       <section className="border-b border-slate-200 px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
+            <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#5B6067]">
               <MessageSquare size={17} />
               Contact Us
             </p>
 
-            <h1 className="text-4xl font-bold leading-tight text-[#0B1F3A] sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-[#0B1F3A] sm:text-5xl lg:text-5xl">
               Let&apos;s Start a Conversation
             </h1>
 
@@ -43,20 +43,20 @@ export default function Contact() {
       </section>
 
       {/* CONTACT INFORMATION */}
-      <section className="bg-[#F8FAFC] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="bg-[#1B3A5C] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
 
           {/* EMAIL */}
           <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37]">
+            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#5B6067]/10 text-[#1B3A5C]">
               <Mail size={22} />
             </div>
 
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#5B6067]">
               Email
             </p>
 
-            <h2 className="text-2xl font-bold text-[#0B1F3A]">
+            <h2 className="text-2xl font-bold text-[#]">
               Get in touch
             </h2>
 
@@ -66,7 +66,7 @@ export default function Contact() {
 
             <a
               href="mailto:info@elephantlearning.co.za"
-              className="mt-6 inline-block break-all text-sm font-semibold text-[#0B1F3A] transition hover:text-[#D4AF37]"
+              className="mt-6 inline-block break-all text-sm font-semibold text-[#0B1F3A] transition hover:text-[#5B6067]"
             >
               info@elephantlearning.co.za
             </a>
@@ -74,11 +74,11 @@ export default function Contact() {
 
           {/* CONTACT TEAM */}
           <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37]">
+            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#5B6067]/10 text-[#1B3A5C]">
               <MessageSquare size={22} />
             </div>
 
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#5B6067]">
               Contact
             </p>
 
@@ -98,11 +98,11 @@ export default function Contact() {
 
           {/* LOCATION */}
           <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37]">
+            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#5B6067]/10 text-[#1B3A5C]">
               <MapPin size={22} />
             </div>
 
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#5B6067]">
               Location
             </p>
 
@@ -127,7 +127,7 @@ export default function Contact() {
 
           {/* LEFT */}
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#5B6067]">
               Get In Touch
             </p>
 

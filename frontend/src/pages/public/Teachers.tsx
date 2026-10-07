@@ -168,14 +168,14 @@ export default function ForTeachers() {
 
             {/* Hero content */}
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#D4AF37]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#DCE0E3]/30 bg-[#D4AF37]/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#DCE0E3]">
                 <GraduationCap size={17} />
                 For Educators
               </div>
 
-              <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-[#1F5EA8] sm:text-5xl lg:text-5xl">
                 Build Your Teaching Career With{" "}
-                <span className="text-[#F7F8F9]">Elephant Learning</span>
+                <span className="text-[#1F5EA8]">Elephant Learning</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
@@ -207,17 +207,17 @@ export default function ForTeachers() {
               {/* Small trust points */}
               <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-300">
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#D4AF37]" />
+                  <CheckCircle2 size={17} className="text-[#5B6067]" />
                   Structured recruitment
                 </span>
 
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#D4AF37]" />
+                  <CheckCircle2 size={17} className="text-[#5B6067]" />
                   Candidate support
                 </span>
 
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#D4AF37]" />
+                  <CheckCircle2 size={17} className="text-[#5B6067]" />
                   Talent opportunities
                 </span>
               </div>
@@ -229,7 +229,7 @@ export default function ForTeachers() {
                 <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#132F4C] to-[#08182d]">
 
                   <div className="text-center">
-                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37] ring-1 ring-[#D4AF37]/30">
+                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/30">
                       <GraduationCap size={46} />
                     </div>
 
@@ -248,7 +248,7 @@ export default function ForTeachers() {
               {/* Floating card */}
               <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:block">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0B1F3A] text-[#D4AF37]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0B1F3A] text-[#DCE0E3]">
                     <UserCheck size={21} />
                   </div>
 
@@ -275,7 +275,7 @@ export default function ForTeachers() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
               Why Join Elephant Learning?
             </span>
 
@@ -302,11 +302,11 @@ export default function ForTeachers() {
                   <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-[#D4AF37]/5 blur-2xl transition group-hover:bg-[#D4AF37]/10" />
 
                   <div className="relative">
-                    <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-[#0B1F3A] text-[#D4AF37] transition duration-300 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A]">
+                    <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-[#0B1F3A] text-[#DCE0E3] transition duration-300 group-hover:bg-[#1B3A5C] group-hover:text-[#DCE0E3]">
                       <Icon size={24} />
                     </div>
 
-                    <div className="mt-6 text-xs font-bold uppercase tracking-widest text-[#D4AF37]">
+                    <div className="mt-6 text-xs font-bold uppercase tracking-widest text-[#5B6067]">
                       0{index + 1}
                     </div>
 
@@ -335,7 +335,7 @@ export default function ForTeachers() {
 
             {/* Left */}
             <div>
-              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
                 Who Can Apply?
               </span>
 
@@ -349,7 +349,7 @@ export default function ForTeachers() {
               </p>
 
               <div className="mt-8 rounded-3xl bg-[#0B1F3A] p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37]">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#DCE0E3]/10 text-[#DCE0E3]">
                   <Users size={28} />
                 </div>
 
@@ -365,7 +365,7 @@ export default function ForTeachers() {
 
                 <Link
                   to="/teacher/register"
-                  className="mt-7 inline-flex items-center gap-2 font-semibold text-[#D4AF37] transition hover:text-[#e6c45c]"
+                  className="mt-7 inline-flex items-center gap-2 font-semibold text-[#DCE0E3] transition hover:text-[#5B6067]"
                 >
                   Create Your Profile
                   <ArrowRight size={17} />
@@ -383,7 +383,7 @@ export default function ForTeachers() {
                     key={item.title}
                     className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/50 hover:shadow-lg"
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F8FAFC] text-[#0B1F3A] transition group-hover:bg-[#0B1F3A] group-hover:text-[#D4AF37]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F8FAFC] text-[#0B1F3A] transition group-hover:bg-[#0B1F3A] group-hover:text-[#DCE0E3]">
                       <Icon size={22} />
                     </div>
 
@@ -413,7 +413,7 @@ export default function ForTeachers() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
               How the Process Works
             </span>
 
@@ -438,12 +438,12 @@ export default function ForTeachers() {
 
                 return (
                   <div key={step.number} className="relative">
-                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F8FAFC] bg-[#0B1F3A] text-[#D4AF37] shadow-lg">
+                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F8FAFC] bg-[#0B1F3A] text-[#DCE0E3] shadow-lg">
                       <Icon size={24} />
                     </div>
 
                     <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                      <span className="text-xs font-bold tracking-widest text-[#D4AF37]">
+                      <span className="text-xs font-bold tracking-widest text-[#5B6067]">
                         STEP {step.number}
                       </span>
 
@@ -474,12 +474,12 @@ export default function ForTeachers() {
 
                 return (
                   <div key={step.number} className="relative">
-                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F8FAFC] bg-[#0B1F3A] text-[#D4AF37] shadow-lg">
+                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F8FAFC] bg-[#0B1F3A] text-[#DCE0E3] shadow-lg">
                       <Icon size={24} />
                     </div>
 
                     <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                      <span className="text-xs font-bold tracking-widest text-[#D4AF37]">
+                      <span className="text-xs font-bold tracking-widest text-[#5B6067]">
                         STEP {step.number}
                       </span>
 
@@ -543,11 +543,11 @@ export default function ForTeachers() {
 
         <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-8">
 
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37] ring-1 ring-[#D4AF37]/20">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/20">
             <GraduationCap size={32} />
           </div>
 
-          <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+          <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#DCE0E3]">
             Start Your Journey
           </p>
 
@@ -562,7 +562,8 @@ export default function ForTeachers() {
 
           <Link
             to="/teacher/register"
-            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-8 py-4 font-semibold text-[#0B1F3A] transition duration-300 hover:bg-[#e6c45c]"
+            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#DCE0E3] px-8 py-4 font-semibold text-[#0B1F3A] transition duration-300 hover:text-[#DCE0E3] hover:bg-[#5B6067]"
+
           >
             Join Our Teacher Network
             <ArrowRight

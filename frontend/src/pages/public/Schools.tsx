@@ -121,14 +121,14 @@ export default function ForSchools() {
           <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             {/* HERO CONTENT */}
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-white/5 px-4 py-2 text-sm font-semibold text-[#D4AF37] backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#DCE0E3]/30 bg-white/5 px-4 py-2 text-sm font-semibold text-[#DCE0E3] backdrop-blur-sm">
                 <School size={16} />
                 For Schools & Education Providers
               </div>
 
-              <h1 className="mt-7 max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-7 max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-[#1F5EA8] sm:text-5xl lg:text-5xl">
                 Find the Right
-                <span className="block text-[#D4AF37]">
+                <span className="block">
                   Educator for Your School
                 </span>
               </h1>
@@ -148,34 +148,35 @@ export default function ForSchools() {
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <Link
                   to="/school/request"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 font-bold text-[#0B1F3A] transition duration-300 hover:bg-[#E6A23C] hover:shadow-lg hover:shadow-[#D4AF37]/20"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#DCE0E3] px-7 py-3.5 font-bold text-[#1B3A5C] transition duration-300 hover:bg-[#5B6067] hover:text-[#DCE0E3] hover:shadow-lg hover:shadow-[#5B6067]/20"
+
                 >
-                  FIND A TEACHER
+                  Find a Teacher
                   <ArrowRight size={19} />
                 </Link>
 
                 <a
                   href="#process"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 font-semibold text-white transition duration-300 hover:border-[#D4AF37]/50 hover:bg-white/5"
+                  className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 font-semibold text-white transition duration-300 hover:border-[#5B6067]/50 hover:bg-white/5"
                 >
-                  HOW IT WORKS
+                  How it Works
                 </a>
               </div>
 
               {/* TRUST POINTS */}
               <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-300">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#D4AF37]" />
+                  <CheckCircle2 size={17} className="text-[#5B6067]" />
                   Structured recruitment
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#D4AF37]" />
+                  <CheckCircle2 size={17} className="text-[#5B6067]" />
                   Candidate screening
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#D4AF37]" />
+                  <CheckCircle2 size={17} className="text-[#5B6067]" />
                   Educator matching
                 </div>
               </div>
@@ -192,7 +193,7 @@ export default function ForSchools() {
 
                   {/* Main visual */}
                   <div className="flex min-h-[430px] flex-col items-center justify-center px-8 text-center">
-                    <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37] ring-1 ring-[#D4AF37]/30">
+                    <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/30">
                       <School size={52} strokeWidth={1.5} />
                     </div>
 
@@ -200,7 +201,7 @@ export default function ForSchools() {
                       Your School.
                     </h2>
 
-                    <h3 className="text-2xl font-bold text-[#D4AF37]">
+                    <h3 className="text-2xl font-bold text-[#DCE0E3]">
                       The Right Educator.
                     </h3>
 
@@ -213,7 +214,7 @@ export default function ForSchools() {
                   {/* Floating card */}
                   <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-md">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B1F3A]">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#] text-[#DCE0E3]">
                         <BadgeCheck size={21} />
                       </div>
 
@@ -234,7 +235,7 @@ export default function ForSchools() {
               {/* Small floating badge */}
               <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:block">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0B1F3A] text-[#D4AF37]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0B1F3A] text-[#DCE0E3]">
                     <UserCheck size={20} />
                   </div>
 
@@ -257,7 +258,7 @@ export default function ForSchools() {
       <section className="bg-[#F8FAFC] py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
               Why Schools Use Elephant Learning
             </span>
 
@@ -282,12 +283,12 @@ export default function ForSchools() {
                   className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
                   {/* Number */}
-                  <div className="absolute right-5 top-5 text-5xl font-black text-slate-100">
+                  <div className="absolute right-5 top-5 text-5xl font-black text-[#5B6067]/20">
                     0{index + 1}
                   </div>
 
                   <div className="relative">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#D4AF37] transition duration-300 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#DCE0E3] transition duration-300 group-hover:bg-[#5B6067] group-hover:text-[#DCE0E3]">
                       <Icon size={25} />
                     </div>
 
@@ -313,7 +314,7 @@ export default function ForSchools() {
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
               Recruitment Process
             </span>
 
@@ -341,20 +342,20 @@ export default function ForSchools() {
                   return (
                     <div key={step.number} className="relative">
                       {/* Icon */}
-                      <div className="relative z-10 mx-auto flex h-24 w-24 items-center justify-center rounded-full border-8 border-white bg-[#0B1F3A] text-[#D4AF37] shadow-lg">
+                      <div className="relative z-10 mx-auto flex h-24 w-24 items-center justify-center rounded-full border-8 border-white bg-[#0B1F3A] text-[#DCE0E3] shadow-lg">
                         <Icon size={27} />
                       </div>
 
                       {/* Arrow */}
                       {index < processSteps.length - 1 && (
-                        <div className="absolute -right-3 top-9 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-[#D4AF37] text-[#0B1F3A] shadow-md">
+                        <div className="absolute -right-3 top-9 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-[#5B6067] text-[#DCE0E3] shadow-md">
                           <ArrowRight size={14} />
                         </div>
                       )}
 
                       {/* Card */}
                       <div className="mt-6 h-full rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:border-[#D4AF37]/40 hover:shadow-md">
-                        <div className="text-xs font-bold tracking-widest text-[#D4AF37]">
+                        <div className="text-xs font-bold tracking-widest text-[#5B6067]">
                           STEP {step.number}
                         </div>
 
@@ -422,17 +423,17 @@ export default function ForSchools() {
                 <div className="absolute -bottom-20 -left-20 h-52 w-52 rounded-full border border-white/5" />
 
                 <div className="relative">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] ring-1 ring-[#D4AF37]/20">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/20">
                     <ClipboardCheck size={30} />
                   </div>
 
-                  <p className="mt-8 text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+                  <p className="mt-8 text-sm font-bold uppercase tracking-[0.2em] text-[#DCE0E3]">
                     Start With Your Requirement
                   </p>
 
                   <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl">
                     The More We Know,
-                    <span className="block text-[#D4AF37]">
+                    <span className="block text-[#DCE0E3]">
                       The Better We Can Match
                     </span>
                   </h2>
@@ -447,7 +448,7 @@ export default function ForSchools() {
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                       <GraduationCap
                         size={22}
-                        className="text-[#D4AF37]"
+                        className="text-[#5B6067]"
                       />
                       <p className="mt-3 text-sm font-semibold text-white">
                         Qualifications
@@ -455,21 +456,21 @@ export default function ForSchools() {
                     </div>
 
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <School size={22} className="text-[#D4AF37]" />
+                      <School size={22} className="text-[#5B6067]" />
                       <p className="mt-3 text-sm font-semibold text-white">
                         Teaching Needs
                       </p>
                     </div>
 
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <Laptop size={22} className="text-[#D4AF37]" />
+                      <Laptop size={22} className="text-[#5B6067]" />
                       <p className="mt-3 text-sm font-semibold text-white">
                         Teaching Format
                       </p>
                     </div>
 
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <Users size={22} className="text-[#D4AF37]" />
+                      <Users size={22} className="text-[#5B6067]" />
                       <p className="mt-3 text-sm font-semibold text-white">
                         Experience
                       </p>
@@ -481,7 +482,7 @@ export default function ForSchools() {
 
             {/* CONTENT */}
             <div>
-              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
                 Tell Us What You Need
               </span>
 
@@ -499,12 +500,12 @@ export default function ForSchools() {
                 {requirements.map((item) => (
                   <div
                     key={item}
-                    className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 transition hover:border-[#D4AF37]/40 hover:shadow-sm"
+                    className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 transition hover:border-[#5B6067]/40 hover:shadow-sm"
                   >
                     <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#D4AF37]/10">
                       <CheckCircle2
                         size={16}
-                        className="text-[#D4AF37]"
+                        className="text-[#5B6067]"
                       />
                     </div>
 
@@ -519,7 +520,7 @@ export default function ForSchools() {
                 to="/school/request"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-7 py-3.5 font-bold text-white transition duration-300 hover:bg-[#132F4C] hover:shadow-lg"
               >
-                FIND A TEACHER
+                Find a Teacher
                 <ArrowRight size={18} />
               </Link>
             </div>
@@ -534,11 +535,11 @@ export default function ForSchools() {
         <div className="absolute -bottom-40 -right-32 h-96 w-96 rounded-full border border-[#D4AF37]/10" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-8">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#D4AF37]/10 text-[#D4AF37] ring-1 ring-[#D4AF37]/20">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/20">
             <School size={30} />
           </div>
 
-          <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+          <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
             Ready to Get Started?
           </p>
 
@@ -553,9 +554,10 @@ export default function ForSchools() {
 
           <Link
             to="/school/request"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-8 py-4 font-bold text-[#0B1F3A] transition duration-300 hover:bg-[#E6A23C] hover:shadow-xl hover:shadow-[#D4AF37]/20"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#DCE0E3] px-8 py-4 font-bold text-[#1B3A5C] transition duration-300 hover:bg-[#5B6067] hover:text-[#DCE0E3] hover:shadow-xl hover:shadow-[#5B6067]/20"
+
           >
-            FIND A TEACHER
+            Find a Teacher
             <ArrowRight size={19} />
           </Link>
         </div>
