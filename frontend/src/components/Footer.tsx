@@ -3,25 +3,26 @@ import { Link } from "react-router-dom";
 import logo from "../assets/Logo/Logo.png";
 
 const BUSINESS_ADDRESS =
-  "Gqeberha, Eastern Cape, South Africa";
+  "Central, Gqeberha, Eastern Cape, South Africa";
 
-const BUSINESS_PHONE = "+27 00 000 0000";
+const BUSINESS_PHONE = "+27 41 000 0000";
 
 const BUSINESS_EMAIL = "info@elephantlearning.co.za";
+
+const GOOGLE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Central%2C%20Gqeberha%2C%20Eastern%20Cape%2C%20South%20Africa";
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#0B1F3A]">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-
-          {/* Brand */}
+          {/* =====================================================
+              BRAND
+          ===================================================== */}
           <div>
-            <Link
-              to="/"
-              className="inline-flex items-center"
-            >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white p-1.5 shadow-sm">
+            <Link to="/" className="inline-flex items-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white p-1.5 shadow-lg shadow-black/10">
                 <img
                   src={logo}
                   alt="Elephant Learning"
@@ -41,7 +42,7 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center border border-white/10 text-xs font-semibold tracking-wide text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.02] text-xs font-semibold tracking-wide text-white/60 transition duration-300 hover:border-[#1F5EA8] hover:bg-[#1F5EA8] hover:text-white"
               >
                 li
               </a>
@@ -49,127 +50,160 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center border border-white/10 text-sm font-semibold text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.02] text-sm font-semibold text-white/60 transition duration-300 hover:border-[#1F5EA8] hover:bg-[#1F5EA8] hover:text-white"
               >
                 f
               </a>
-              
-               <a
+
+              <a
                 href="#"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center border border-white/10 text-sm font-semibold text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.02] text-sm font-semibold text-white/60 transition duration-300 hover:border-[#1F5EA8] hover:bg-[#1F5EA8] hover:text-white"
               >
                 in
               </a>
-               <a
+
+              <a
                 href="#"
                 aria-label="X"
-                className="flex h-10 w-10 items-center justify-center border border-white/10 text-sm font-semibold text-white/70 transition hover:border-[#DCE0E3] hover:text-[#DCE0E3]"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.02] text-sm font-semibold text-white/60 transition duration-300 hover:border-[#1F5EA8] hover:bg-[#1F5EA8] hover:text-white"
               >
                 x
               </a>
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* =====================================================
+              NAVIGATION
+          ===================================================== */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DCE0E3]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6EA8E8]">
               Navigation
             </h3>
 
             <div className="mt-6 flex flex-col gap-4">
               <Link
                 to="/"
-                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
                 Home
               </Link>
 
               <Link
                 to="/about"
-                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
                 About Us
               </Link>
 
               <Link
                 to="/contact"
-                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
                 Contact
               </Link>
 
               <Link
                 to="/teachers"
-                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
                 For Educators
               </Link>
+
               <Link
                 to="/schools"
-                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
-                For School
+                For Schools
               </Link>
+
               <Link
                 to="/resources"
-                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
                 Resources
               </Link>
             </div>
           </div>
 
-          {/* For Educators */}
+          {/* =====================================================
+              FOR EDUCATORS
+          ===================================================== */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DCE0E3]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6EA8E8]">
               For Educators
             </h3>
 
             <div className="mt-6 flex flex-col gap-4">
               <Link
                 to="/teacher/register"
-                className="text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
                 Register as an Educator
               </Link>
 
               <Link
+                to="/teacher/login"
+                className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
+              >
+                Educator Login
+              </Link>
+
+              <Link
                 to="/teacher/register"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#DCE0E3] transition hover:text-white"
+                className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-[#1F5EA8] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#2E73C5]"
               >
                 Join Our Talent Pool
-                <ArrowUpRight size={16} />
+
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </Link>
             </div>
           </div>
 
-          {/* Contact */}
+          {/* =====================================================
+              CONTACT
+          ===================================================== */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DCE0E3]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6EA8E8]">
               Contact Us
             </h3>
 
             <div className="mt-6 space-y-5">
-
               {/* Address */}
-              <div className="flex gap-3 text-sm leading-6 text-white/65">
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex gap-3 text-sm leading-6 text-white/60 transition hover:text-white"
+              >
                 <MapPin
                   size={18}
-                  className="mt-1 shrink-0 text-[#DCE0E3]"
+                  className="mt-1 shrink-0 text-[#6EA8E8] transition group-hover:text-[#8CC2FF]"
                 />
 
-                <span>{BUSINESS_ADDRESS}</span>
-              </div>
+                <span>
+                  Central
+                  <br />
+                  Gqeberha, Eastern Cape
+                  <br />
+                  South Africa
+                  <span className="mt-1 block text-xs text-[#6EA8E8]">
+                    Get directions
+                  </span>
+                </span>
+              </a>
 
               {/* Phone */}
               <a
                 href={`tel:${BUSINESS_PHONE.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="group flex items-center gap-3 text-sm text-white/60 transition hover:text-white"
               >
                 <Phone
                   size={18}
-                  className="text-[#DCE0E3]"
+                  className="text-[#6EA8E8] transition group-hover:text-[#8CC2FF]"
                 />
 
                 <span>{BUSINESS_PHONE}</span>
@@ -178,42 +212,32 @@ export default function Footer() {
               {/* Email */}
               <a
                 href={`mailto:${BUSINESS_EMAIL}`}
-                className="flex items-center gap-3 text-sm text-white/65 transition hover:text-[#DCE0E3]"
+                className="group flex items-center gap-3 text-sm text-white/60 transition hover:text-white"
               >
                 <Mail
                   size={18}
-                  className="text-[#DCE0E3]"
+                  className="text-[#6EA8E8] transition group-hover:text-[#8CC2FF]"
                 />
 
-                <span>{BUSINESS_EMAIL}</span>
+                <span className="break-all">{BUSINESS_EMAIL}</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="mt-14 flex flex-col gap-5 border-t border-white/10 pt-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
-
+        {/* =====================================================
+            BOTTOM FOOTER
+        ===================================================== */}
+        <div className="mt-14 flex flex-col gap-5 border-t border-white/10 pt-7 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Elephant Learning.
-            All rights reserved.
+            © {new Date().getFullYear()} Elephant Learning. All rights
+            reserved.
           </p>
 
-          {/* <div className="flex flex-wrap gap-6">
-            <Link
-              to="/terms"
-              className="transition hover:text-[#D4AF37]"
-            >
-              Terms & Conditions
-            </Link>
-
-            <Link
-              to="/privacy"
-              className="transition hover:text-[#D4AF37]"
-            >
-              Privacy Policy
-            </Link>
-          </div> */}
+          <div className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#1F5EA8]" />
+            <span>Connecting Educators With Opportunities</span>
+          </div>
         </div>
       </div>
     </footer>

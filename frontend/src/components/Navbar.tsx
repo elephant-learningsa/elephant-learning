@@ -5,10 +5,10 @@ import logo from "../assets/Logo/Logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
-    { label: "For Educators", path: "/teachers" },
-   { label: "For Schools", path: "/schools" },
-   { label: "About", path: "/about" },
-   { label: "Resources", path: "/resources" },
+  { label: "For Educators", path: "/teachers" },
+  { label: "For Schools", path: "/schools" },
+  { label: "About", path: "/about" },
+  { label: "Resources", path: "/resources" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -20,9 +20,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-[#DCEAF8] bg-white shadow-sm">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-
         {/* Logo */}
         <Link
           to="/"
@@ -30,7 +29,7 @@ export default function Navbar() {
           className="flex items-center"
           aria-label="Elephant Learning home"
         >
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white p-1.5 shadow-sm">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white p-1.5 shadow-sm ring-1 ring-[#EAF2FB]">
             <img
               src={logo}
               alt="Elephant Learning"
@@ -48,8 +47,8 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `relative py-2 text-sm font-medium tracking-wide transition ${
                   isActive
-                    ? "text-[#0B1F3A]"
-                    : "text-slate-700 hover:text-[#0B1F3A]"
+                    ? "text-[#1F5EA8]"
+                    : "text-[#334155] hover:text-[#1F5EA8]"
                 }`
               }
             >
@@ -60,7 +59,7 @@ export default function Navbar() {
           {/* Join Our Talent Pool */}
           <Link
             to="/teacher/register"
-            className="rounded-full bg-[#1B3A5C] px-6 py-3 text-sm font-semibold tracking-wide text-[#F7F8F9] hover:text-[#F7F8F9] transition hover:bg-[#5B6067]"
+            className="rounded-full bg-[#1F5EA8] px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-sm transition duration-300 hover:bg-[#2E73C5] hover:shadow-md"
           >
             Join Our Talent Pool
           </Link>
@@ -70,7 +69,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMobileOpen((prev) => !prev)}
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 text-[#0B1F3A] transition hover:border-[#D4AF37] hover:text-[#D4AF37] md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-[#DCEAF8] bg-[#F3F7FC] text-[#0B1F3A] transition duration-300 hover:border-[#1F5EA8] hover:bg-[#EAF2FB] hover:text-[#1F5EA8] md:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
@@ -80,7 +79,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {mobileOpen && (
-        <div className="border-t border-slate-200 bg-white md:hidden">
+        <div className="border-t border-[#DCEAF8] bg-white md:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-5 sm:px-8">
             {navItems.map((item) => (
               <NavLink
@@ -88,10 +87,10 @@ export default function Navbar() {
                 to={item.path}
                 onClick={closeMobileMenu}
                 className={({ isActive }) =>
-                  `border-b border-slate-200 py-4 text-sm font-medium tracking-wide transition ${
+                  `border-b border-[#EAF2FB] py-4 text-sm font-medium tracking-wide transition ${
                     isActive
-                      ? "text-[#0B1F3A]"
-                      : "text-slate-700 hover:text-[#0B1F3A]"
+                      ? "text-[#1F5EA8]"
+                      : "text-[#334155] hover:text-[#1F5EA8]"
                   }`
                 }
               >
@@ -103,7 +102,7 @@ export default function Navbar() {
             <Link
               to="/teacher/register"
               onClick={closeMobileMenu}
-              className="mt-5 rounded-full bg-[#1B3A5C] px-6 py-4 text-center text-sm font-semibold tracking-wide text-[#F7F8F9] transition hover:bg-[#e1c45a]"
+              className="mt-5 rounded-full bg-[#1F5EA8] px-6 py-4 text-center text-sm font-semibold tracking-wide text-white shadow-sm transition duration-300 hover:bg-[#2E73C5] hover:shadow-md"
             >
               Join Our Talent Pool
             </Link>

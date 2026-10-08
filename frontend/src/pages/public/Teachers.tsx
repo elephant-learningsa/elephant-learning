@@ -158,36 +158,47 @@ export default function ForTeachers() {
       {/* =========================================================
           HERO
       ========================================================= */}
-      <section className="relative bg-[#0B1F3A]">
-        {/* Decorative background */}
-        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#D4AF37]/10 blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-[#D4AF37]/5 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#0B1F3A]">
+
+        {/* Blue gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1F3A] via-[#123D68] to-[#1F5EA8]" />
+
+        {/* Blue decorative circles */}
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#2D72C4]/30 blur-3xl" />
+
+        <div className="absolute -bottom-40 -left-32 h-[28rem] w-[28rem] rounded-full bg-[#1F5EA8]/40 blur-3xl" />
+
+        <div className="absolute right-[35%] top-1/2 h-40 w-40 rounded-full bg-[#63A4E8]/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
 
             {/* Hero content */}
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#DCE0E3]/30 bg-[#D4AF37]/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#DCE0E3]">
+
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#63A4E8]/40 bg-[#1F5EA8]/30 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#B9DCFA] backdrop-blur-sm">
                 <GraduationCap size={17} />
                 For Educators
               </div>
 
-              <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-[#1F5EA8] sm:text-5xl lg:text-5xl">
+              <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-5xl">
                 Build Your Teaching Career With{" "}
-                <span className="text-[#1F5EA8]">Elephant Learning</span>
+                <span className="text-[#63A4E8]">
+                  Elephant Learning
+                </span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-blue-100/80">
                 Join our network of educators and connect with potential
                 teaching opportunities that match your qualifications,
                 experience and availability.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+
                 <Link
                   to="/teacher/register"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#DCE0E3] px-7 py-4 font-semibold text-[#0B1F3A] transition duration-300 hover:text-[#DCE0E3] hover:bg-[#5B6067]"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#1F5EA8] px-7 py-4 font-semibold text-white shadow-lg shadow-[#0B1F3A]/30 transition duration-300 hover:bg-[#2D72C4] hover:shadow-xl"
                 >
                   Join Our Teacher Network
                   <ArrowRight
@@ -198,38 +209,60 @@ export default function ForTeachers() {
 
                 <a
                   href="#process"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition duration-300 hover:border-[#5B6067] hover:bg-white/5"
+                  className="inline-flex items-center justify-center rounded-full border border-[#63A4E8]/40 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur-sm transition duration-300 hover:border-[#63A4E8] hover:bg-[#1F5EA8]/20"
                 >
                   View the Process
                 </a>
+
               </div>
 
-              {/* Small trust points */}
-              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-300">
+              {/* Trust points */}
+              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-blue-100/80">
+
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#5B6067]" />
+                  <CheckCircle2
+                    size={17}
+                    className="text-[#63A4E8]"
+                  />
                   Structured recruitment
                 </span>
 
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#5B6067]" />
+                  <CheckCircle2
+                    size={17}
+                    className="text-[#63A4E8]"
+                  />
                   Candidate support
                 </span>
 
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={17} className="text-[#5B6067]" />
+                  <CheckCircle2
+                    size={17}
+                    className="text-[#63A4E8]"
+                  />
                   Talent opportunities
                 </span>
+
               </div>
             </div>
 
             {/* Hero visual */}
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl">
-                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#132F4C] to-[#08182d]">
 
-                  <div className="text-center">
-                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/30">
+              <div className="absolute -inset-5 rounded-[2.5rem] bg-[#63A4E8]/10 blur-2xl" />
+
+              <div className="relative overflow-hidden rounded-[2rem] border border-[#63A4E8]/30 bg-[#1F5EA8]/20 p-3 shadow-2xl backdrop-blur-sm">
+
+                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#174A85] via-[#1F5EA8] to-[#2D72C4]">
+
+                  {/* Decorative shapes */}
+                  <div className="absolute h-72 w-72 rounded-full border border-white/10" />
+
+                  <div className="absolute h-52 w-52 rounded-full border border-white/10" />
+
+                  <div className="relative text-center">
+
+                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white/10 text-[#B9DCFA] ring-1 ring-[#B9DCFA]/40 backdrop-blur-sm">
                       <GraduationCap size={46} />
                     </div>
 
@@ -237,18 +270,21 @@ export default function ForTeachers() {
                       Your Next Opportunity
                     </h3>
 
-                    <p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-slate-400">
+                    <p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-blue-100/80">
                       Connect your skills, experience and passion for education
                       with potential opportunities.
                     </p>
+
                   </div>
                 </div>
               </div>
 
               {/* Floating card */}
-              <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:block">
+              <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-[#D7E8F8] bg-white p-4 shadow-xl sm:block">
+
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0B1F3A] text-[#DCE0E3]">
+
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1F5EA8] text-white">
                     <UserCheck size={21} />
                   </div>
 
@@ -256,10 +292,12 @@ export default function ForTeachers() {
                     <p className="text-xs font-medium text-slate-500">
                       Educator Network
                     </p>
+
                     <p className="font-semibold text-[#0B1F3A]">
                       Your profile matters
                     </p>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -271,11 +309,13 @@ export default function ForTeachers() {
       {/* =========================================================
           WHY JOIN
       ========================================================= */}
-      <section className="bg-[#F8FAFC] py-20 lg:py-24">
+      <section className="bg-[#F4F8FC] py-20 lg:py-24">
+
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
+
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#1F5EA8]">
               Why Join Elephant Learning?
             </span>
 
@@ -288,25 +328,29 @@ export default function ForTeachers() {
               providers while supporting candidates through a structured
               recruitment process.
             </p>
+
           </div>
 
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
 
               return (
                 <div
                   key={benefit.title}
-                  className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/40 hover:shadow-xl"
+                  className="group relative overflow-hidden rounded-2xl border border-[#D8E6F3] bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#1F5EA8]/50 hover:shadow-xl"
                 >
-                  <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-[#D4AF37]/5 blur-2xl transition group-hover:bg-[#D4AF37]/10" />
+
+                  <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-[#1F5EA8]/5 blur-2xl transition group-hover:bg-[#1F5EA8]/10" />
 
                   <div className="relative">
-                    <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-[#0B1F3A] text-[#DCE0E3] transition duration-300 group-hover:bg-[#1B3A5C] group-hover:text-[#DCE0E3]">
+
+                    <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-[#EAF3FC] text-[#1F5EA8] transition duration-300 group-hover:bg-[#1F5EA8] group-hover:text-white">
                       <Icon size={24} />
                     </div>
 
-                    <div className="mt-6 text-xs font-bold uppercase tracking-widest text-[#5B6067]">
+                    <div className="mt-6 text-xs font-bold uppercase tracking-widest text-[#2D72C4]">
                       0{index + 1}
                     </div>
 
@@ -317,10 +361,12 @@ export default function ForTeachers() {
                     <p className="mt-3 leading-7 text-slate-600">
                       {benefit.description}
                     </p>
+
                   </div>
                 </div>
               );
             })}
+
           </div>
         </div>
       </section>
@@ -328,14 +374,18 @@ export default function ForTeachers() {
       {/* =========================================================
           WHO CAN APPLY
       ========================================================= */}
-      <section className="bg-white py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+      <section className="relative overflow-hidden bg-white py-20 lg:py-24">
+
+        <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#EAF3FC] blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
           <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
 
             {/* Left */}
             <div>
-              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
+
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#1F5EA8]">
                 Who Can Apply?
               </span>
 
@@ -348,8 +398,9 @@ export default function ForTeachers() {
                 qualifications, experiences and areas of expertise.
               </p>
 
-              <div className="mt-8 rounded-3xl bg-[#0B1F3A] p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#DCE0E3]/10 text-[#DCE0E3]">
+              <div className="mt-8 rounded-3xl bg-gradient-to-br from-[#0B1F3A] to-[#174A85] p-8 shadow-xl">
+
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1F5EA8] text-white">
                   <Users size={28} />
                 </div>
 
@@ -357,7 +408,7 @@ export default function ForTeachers() {
                   Your experience has value
                 </h3>
 
-                <p className="mt-3 leading-7 text-slate-300">
+                <p className="mt-3 leading-7 text-blue-100/80">
                   Whether you are an experienced teacher, graduate, tutor,
                   trainer or subject specialist, your background can form part
                   of your educator profile.
@@ -365,25 +416,28 @@ export default function ForTeachers() {
 
                 <Link
                   to="/teacher/register"
-                  className="mt-7 inline-flex items-center gap-2 font-semibold text-[#DCE0E3] transition hover:text-[#5B6067]"
+                  className="mt-7 inline-flex items-center gap-2 font-semibold text-[#63A4E8] transition hover:text-white"
                 >
                   Create Your Profile
                   <ArrowRight size={17} />
                 </Link>
+
               </div>
             </div>
 
             {/* Right */}
             <div className="grid gap-4 sm:grid-cols-2">
+
               {eligibleApplicants.map((item) => {
                 const Icon = item.icon;
 
                 return (
                   <div
                     key={item.title}
-                    className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/50 hover:shadow-lg"
+                    className="group rounded-2xl border border-[#D8E6F3] bg-[#F8FBFE] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#1F5EA8]/40 hover:bg-white hover:shadow-lg"
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F8FAFC] text-[#0B1F3A] transition group-hover:bg-[#0B1F3A] group-hover:text-[#DCE0E3]">
+
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#EAF3FC] text-[#1F5EA8] transition group-hover:bg-[#1F5EA8] group-hover:text-white">
                       <Icon size={22} />
                     </div>
 
@@ -394,9 +448,11 @@ export default function ForTeachers() {
                     <p className="mt-2 text-sm leading-6 text-slate-600">
                       {item.description}
                     </p>
+
                   </div>
                 );
               })}
+
             </div>
 
           </div>
@@ -408,12 +464,16 @@ export default function ForTeachers() {
       ========================================================= */}
       <section
         id="process"
-        className="bg-[#F8FAFC] py-20 lg:py-24"
+        className="relative overflow-hidden bg-[#F4F8FC] py-20 lg:py-24"
       >
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+
+        <div className="absolute -right-40 top-20 h-96 w-96 rounded-full bg-[#DCEEFF] blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
+
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#1F5EA8]">
               How the Process Works
             </span>
 
@@ -425,25 +485,29 @@ export default function ForTeachers() {
               Our recruitment journey helps us understand your experience,
               verify your information and identify suitable opportunities.
             </p>
+
           </div>
 
           {/* Desktop timeline */}
           <div className="relative mt-16 hidden lg:block">
 
-            <div className="absolute left-[6%] right-[6%] top-8 h-px bg-[#D4AF37]/30" />
+            <div className="absolute left-[6%] right-[6%] top-8 h-px bg-[#1F5EA8]/30" />
 
             <div className="grid grid-cols-4 gap-7">
+
               {processSteps.slice(0, 4).map((step) => {
                 const Icon = step.icon;
 
                 return (
                   <div key={step.number} className="relative">
-                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F8FAFC] bg-[#0B1F3A] text-[#DCE0E3] shadow-lg">
+
+                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F4F8FC] bg-[#1F5EA8] text-white shadow-lg shadow-[#1F5EA8]/20">
                       <Icon size={24} />
                     </div>
 
-                    <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                      <span className="text-xs font-bold tracking-widest text-[#5B6067]">
+                    <div className="mt-6 rounded-2xl border border-[#D8E6F3] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+
+                      <span className="text-xs font-bold tracking-widest text-[#1F5EA8]">
                         STEP {step.number}
                       </span>
 
@@ -454,32 +518,39 @@ export default function ForTeachers() {
                       <p className="mt-3 text-sm leading-6 text-slate-600">
                         {step.description}
                       </p>
+
                     </div>
                   </div>
                 );
               })}
+
             </div>
 
             <div className="my-10 flex justify-center">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#D4AF37] bg-white text-[#D4AF37]">
+
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#1F5EA8]/40 bg-white text-[#1F5EA8] shadow-sm">
                 <ArrowRight className="rotate-90" size={19} />
               </div>
+
             </div>
 
-            <div className="absolute bottom-[calc(50%-1px)] left-[6%] right-[6%] h-px bg-[#D4AF37]/30" />
+            <div className="absolute bottom-[calc(50%-1px)] left-[6%] right-[6%] h-px bg-[#1F5EA8]/30" />
 
             <div className="grid grid-cols-4 gap-7">
+
               {processSteps.slice(4).reverse().map((step) => {
                 const Icon = step.icon;
 
                 return (
                   <div key={step.number} className="relative">
-                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F8FAFC] bg-[#0B1F3A] text-[#DCE0E3] shadow-lg">
+
+                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border-4 border-[#F4F8FC] bg-[#174A85] text-white shadow-lg shadow-[#174A85]/20">
                       <Icon size={24} />
                     </div>
 
-                    <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                      <span className="text-xs font-bold tracking-widest text-[#5B6067]">
+                    <div className="mt-6 rounded-2xl border border-[#D8E6F3] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+
+                      <span className="text-xs font-bold tracking-widest text-[#1F5EA8]">
                         STEP {step.number}
                       </span>
 
@@ -490,16 +561,20 @@ export default function ForTeachers() {
                       <p className="mt-3 text-sm leading-6 text-slate-600">
                         {step.description}
                       </p>
+
                     </div>
                   </div>
                 );
               })}
+
             </div>
           </div>
 
           {/* Mobile timeline */}
           <div className="mt-12 lg:hidden">
-            <div className="relative ml-4 border-l-2 border-[#D4AF37]/30 pl-8">
+
+            <div className="relative ml-4 border-l-2 border-[#1F5EA8]/30 pl-8">
+
               {processSteps.map((step, index) => {
                 const Icon = step.icon;
 
@@ -508,12 +583,14 @@ export default function ForTeachers() {
                     key={step.number}
                     className={index === processSteps.length - 1 ? "" : "pb-8"}
                   >
-                    <div className="absolute -left-[21px] flex h-10 w-10 items-center justify-center rounded-full bg-[#0B1F3A] text-[#D4AF37] ring-8 ring-[#F8FAFC]">
+
+                    <div className="absolute -left-[21px] flex h-10 w-10 items-center justify-center rounded-full bg-[#1F5EA8] text-white ring-8 ring-[#F4F8FC]">
                       <Icon size={18} />
                     </div>
 
-                    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                      <span className="text-xs font-bold tracking-widest text-[#D4AF37]">
+                    <div className="rounded-2xl border border-[#D8E6F3] bg-white p-5 shadow-sm">
+
+                      <span className="text-xs font-bold tracking-widest text-[#1F5EA8]">
                         STEP {step.number}
                       </span>
 
@@ -524,10 +601,12 @@ export default function ForTeachers() {
                       <p className="mt-2 text-sm leading-6 text-slate-600">
                         {step.description}
                       </p>
+
                     </div>
                   </div>
                 );
               })}
+
             </div>
           </div>
 
@@ -538,16 +617,20 @@ export default function ForTeachers() {
           FINAL CTA
       ========================================================= */}
       <section className="relative overflow-hidden bg-[#0B1F3A] py-20 lg:py-24">
-        <div className="absolute -right-24 top-0 h-72 w-72 rounded-full bg-[#D4AF37]/10 blur-3xl" />
-        <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#D4AF37]/5 blur-3xl" />
+
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1F3A] via-[#123D68] to-[#1F5EA8]" />
+
+        <div className="absolute -right-24 top-0 h-72 w-72 rounded-full bg-[#63A4E8]/15 blur-3xl" />
+
+        <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#1F5EA8]/30 blur-3xl" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-8">
 
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/20">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#1F5EA8] text-white ring-1 ring-[#63A4E8]/50">
             <GraduationCap size={32} />
           </div>
 
-          <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#DCE0E3]">
+          <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#63A4E8]">
             Start Your Journey
           </p>
 
@@ -555,26 +638,26 @@ export default function ForTeachers() {
             Ready to Join the Elephant Learning Network?
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100/80">
             Create your educator profile and take the first step towards being
             considered for suitable teaching opportunities.
           </p>
 
           <Link
             to="/teacher/register"
-            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#DCE0E3] px-8 py-4 font-semibold text-[#0B1F3A] transition duration-300 hover:text-[#DCE0E3] hover:bg-[#5B6067]"
-
+            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#1F5EA8] px-8 py-4 font-semibold text-white shadow-lg shadow-[#071525]/30 transition duration-300 hover:bg-[#2D72C4] hover:shadow-xl"
           >
             Join Our Teacher Network
+
             <ArrowRight
               size={19}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
           </Link>
+
         </div>
       </section>
 
     </main>
   );
 }
-
