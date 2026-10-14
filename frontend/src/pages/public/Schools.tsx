@@ -3,11 +3,8 @@ import {
   BadgeCheck,
   CheckCircle2,
   ClipboardCheck,
-  FileSearch,
   GraduationCap,
   Laptop,
-  MessageSquare,
-  Search,
   School,
   ShieldCheck,
   UserCheck,
@@ -54,50 +51,50 @@ const benefits = [
   },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Tell Us What You Need",
-    description:
-      "Share your teaching requirements, including subjects, grade levels, experience, location, teaching format and availability.",
-    icon: MessageSquare,
-  },
-  {
-    number: "02",
-    title: "Search Talent Pool",
-    description:
-      "Our team reviews the available educator network to identify candidates who may align with your requirements.",
-    icon: Search,
-  },
-  {
-    number: "03",
-    title: "Identify Candidates",
-    description:
-      "Potential candidates are shortlisted based on the information available and the requirements of your school.",
-    icon: FileSearch,
-  },
-  {
-    number: "04",
-    title: "School Reviews",
-    description:
-      "Your school receives relevant candidate information so that you can review qualifications, experience and suitability.",
-    icon: School,
-  },
-  {
-    number: "05",
-    title: "Interviews",
-    description:
-      "The school interviews selected candidates and determines who is suitable for the teaching opportunity.",
-    icon: Users,
-  },
-  {
-    number: "06",
-    title: "Placement",
-    description:
-      "Once a candidate has been selected and the relevant arrangements are completed, the educator can proceed to placement.",
-    icon: CheckCircle2,
-  },
-];
+// const processSteps = [
+//   {
+//     number: "01",
+//     title: "Tell Us What You Need",
+//     description:
+//       "Share your teaching requirements, including subjects, grade levels, experience, location, teaching format and availability.",
+//     icon: MessageSquare,
+//   },
+//   {
+//     number: "02",
+//     title: "Search Talent Pool",
+//     description:
+//       "Our team reviews the available educator network to identify candidates who may align with your requirements.",
+//     icon: Search,
+//   },
+//   {
+//     number: "03",
+//     title: "Identify Candidates",
+//     description:
+//       "Potential candidates are shortlisted based on the information available and the requirements of your school.",
+//     icon: FileSearch,
+//   },
+//   {
+//     number: "04",
+//     title: "School Reviews",
+//     description:
+//       "Your school receives relevant candidate information so that you can review qualifications, experience and suitability.",
+//     icon: School,
+//   },
+//   {
+//     number: "05",
+//     title: "Interviews",
+//     description:
+//       "The school interviews selected candidates and determines who is suitable for the teaching opportunity.",
+//     icon: Users,
+//   },
+//   {
+//     number: "06",
+//     title: "Placement",
+//     description:
+//       "Once a candidate has been selected and the relevant arrangements are completed, the educator can proceed to placement.",
+//     icon: CheckCircle2,
+//   },
+// ];
 
 const requirements = [
   "Subject or teaching area",
