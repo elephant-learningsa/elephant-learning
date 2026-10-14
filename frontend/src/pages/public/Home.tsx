@@ -7,8 +7,6 @@ import {
   Check,
   Clock3,
   FileCheck,
-  FileText,
-  Globe2,
   GraduationCap,
   Laptop,
   MessageSquare,
@@ -20,71 +18,71 @@ import {
 
 import { Link } from "react-router-dom";
 
-const teacherJourney = [
-  {
-    number: "01",
-    title: "Apply",
-    description: "Submit your educator application.",
-    icon: FileText,
-  },
-  {
-    number: "02",
-    title: "Get Verified",
-    description: "We review your qualifications and experience.",
-    icon: ShieldCheck,
-  },
-  {
-    number: "03",
-    title: "Join the Talent Pool",
-    description: "Your approved profile joins our educator network.",
-    icon: Users,
-  },
-  {
-    number: "04",
-    title: "Get Matched",
-    description: "We identify opportunities aligned with your profile.",
-    icon: SearchCheck,
-  },
-  {
-    number: "05",
-    title: "Get Placed",
-    description: "Move forward with a suitable school or provider.",
-    icon: BriefcaseBusiness,
-  },
-];
+// const teacherJourney = [
+//   {
+//     number: "01",
+//     title: "Apply",
+//     description: "Submit your educator application.",
+//     icon: FileText,
+//   },
+//   {
+//     number: "02",
+//     title: "Get Verified",
+//     description: "We review your qualifications and experience.",
+//     icon: ShieldCheck,
+//   },
+//   {
+//     number: "03",
+//     title: "Join the Talent Pool",
+//     description: "Your approved profile joins our educator network.",
+//     icon: Users,
+//   },
+//   {
+//     number: "04",
+//     title: "Get Matched",
+//     description: "We identify opportunities aligned with your profile.",
+//     icon: SearchCheck,
+//   },
+//   {
+//     number: "05",
+//     title: "Get Placed",
+//     description: "Move forward with a suitable school or provider.",
+//     icon: BriefcaseBusiness,
+//   },
+// ];
 
-const schoolJourney = [
-  {
-    number: "01",
-    title: "Tell Us What You Need",
-    description:
-      "Share your subject, grade, experience, location and teaching requirements.",
-  },
-  {
-    number: "02",
-    title: "We Find Suitable Educators",
-    description:
-      "We review our talent pool and identify educators who may match your needs.",
-  },
-  {
-    number: "03",
-    title: "Review & Interview",
-    description:
-      "Review suitable candidates and meet the educators you are interested in.",
-  },
-  {
-    number: "04",
-    title: "Make Your Selection",
-    description:
-      "Select the educator who best fits your school's teaching requirement.",
-  },
-  {
-    number: "05",
-    title: "Placement",
-    description:
-      "Complete the relevant arrangements and move forward with placement.",
-  },
-];
+// const schoolJourney = [
+//   {
+//     number: "01",
+//     title: "Tell Us What You Need",
+//     description:
+//       "Share your subject, grade, experience, location and teaching requirements.",
+//   },
+//   {
+//     number: "02",
+//     title: "We Find Suitable Educators",
+//     description:
+//       "We review our talent pool and identify educators who may match your needs.",
+//   },
+//   {
+//     number: "03",
+//     title: "Review & Interview",
+//     description:
+//       "Review suitable candidates and meet the educators you are interested in.",
+//   },
+//   {
+//     number: "04",
+//     title: "Make Your Selection",
+//     description:
+//       "Select the educator who best fits your school's teaching requirement.",
+//   },
+//   {
+//     number: "05",
+//     title: "Placement",
+//     description:
+//       "Complete the relevant arrangements and move forward with placement.",
+//   },
+// ];
 
 const benefits = [
   {
@@ -152,14 +150,14 @@ const values = [
   },
 ];
 
-const visionItems = [
-  "Build a network of 500 educators",
-  "Partner with 50 schools and education providers",
-  "Expand across multiple countries",
-  "Support online and physical teaching placements",
-  "Provide teacher training opportunities",
-  "Support educator career development",
-];
+// const visionItems = [
+//   "Build a network of 500 educators",
+//   "Partner with 50 schools and education providers",
+//   "Expand across multiple countries",
+//   "Support online and physical teaching placements",
+//   "Provide teacher training opportunities",
+//   "Support educator career development",
+// ];
 
 export default function Home() {
   return (
@@ -436,7 +434,7 @@ export default function Home() {
                 </div>
 
                 <Link
-                  to="/schools"
+                  to="/teachers"
                   className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-6 py-3.5 font-bold text-white transition hover:bg-[#132F4C]"
                 >
                   Learn More
@@ -490,7 +488,7 @@ export default function Home() {
                 </div>
 
                 <Link
-                  to="/teachers"
+                  to="/schools"
                   className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#1F5EA8] px-6 py-3.5 font-bold text-white transition hover:bg-[#174A85]"
                 >
                   Learn More
