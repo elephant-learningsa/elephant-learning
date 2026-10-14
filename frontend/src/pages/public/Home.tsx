@@ -202,7 +202,7 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  to="/schools"
+                  to="/school/register"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0B1F3A] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:bg-[#132F4C]"
                 >
                   <School className="h-5 w-5" />
@@ -352,7 +352,7 @@ export default function Home() {
                   </span>
 
                   <div className="relative">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#1F5EA8] transition duration-300 group-hover:bg-[#1F5EA8] group-hover:text-white">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1F5EA8] text-[#DCE0E3] transition duration-300 group-hover:bg-[#1F5EA8] group-hover:text-[#DCE0E3]">
                       <Icon className="h-6 w-6" />
                     </div>
 
@@ -392,24 +392,24 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-2">
-            {/* Educators */}
-            <div className="relative overflow-hidden rounded-[2rem] bg-[#0B1F3A] p-8 shadow-xl sm:p-10">
-              <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-[#1F5EA8]/20" />
+             {/* Educator */}
+            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg sm:p-10">
+              <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#1F5EA8]/5" />
 
               <div className="relative">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#1F5EA8] text-white">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#DCE0E3]">
                   <GraduationCap className="h-8 w-8" />
                 </div>
 
-                <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#63A4E8]">
+                <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#1F5EA8]">
                   For Educators
                 </p>
 
-                <h3 className="mt-3 max-w-lg text-3xl font-bold text-white">
-                  Build Your Teaching Career
+                <h3 className="mt-3 max-w-lg text-2xl font-bold text-[#0B1F3A]">
+                   Build Your Teaching Career
                 </h3>
 
-                <p className="mt-5 max-w-xl leading-8 text-slate-300">
+                <p className="mt-5 max-w-xl leading-8 text-slate-600">
                   Join our educator network and become part of a structured
                   recruitment process designed to connect qualified educators
                   with suitable teaching opportunities.
@@ -417,63 +417,10 @@ export default function Home() {
 
                 <div className="mt-7 space-y-4">
                   {[
-                    "Submit your application",
+                     "Submit your application",
                     "Complete screening and verification",
                     "Join the educator talent pool",
                     "Be considered for suitable opportunities",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-center gap-3 text-slate-200"
-                    >
-                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1F5EA8] text-white">
-                        <Check className="h-3.5 w-3.5" />
-                      </span>
-
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  to="/teachers"
-                  className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#1F5EA8] px-6 py-3.5 font-bold text-white transition hover:bg-[#174A85]"
-                >
-                  Explore Educator Opportunities
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Schools */}
-            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg sm:p-10">
-              <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#1F5EA8]/5" />
-
-              <div className="relative">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#1F5EA8]">
-                  <School className="h-8 w-8" />
-                </div>
-
-                <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#1F5EA8]">
-                  For Schools
-                </p>
-
-                <h3 className="mt-3 max-w-lg text-3xl font-bold text-[#0B1F3A]">
-                  Find Educators Who Match Your Needs
-                </h3>
-
-                <p className="mt-5 max-w-xl leading-8 text-slate-600">
-                  Tell us what you need and we help identify suitable
-                  educators from our network, reducing the time spent on the
-                  initial recruitment process.
-                </p>
-
-                <div className="mt-7 space-y-4">
-                  {[
-                    "Submit your teaching requirement",
-                    "Tell us about your school and role",
-                    "Review suitable candidate profiles",
-                    "Interview and select your preferred educator",
                   ].map((item) => (
                     <div
                       key={item}
@@ -492,7 +439,61 @@ export default function Home() {
                   to="/schools"
                   className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-6 py-3.5 font-bold text-white transition hover:bg-[#132F4C]"
                 >
-                  Find a Teacher
+                  Learn More
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* School */}
+            <div className="relative overflow-hidden rounded-[2rem] bg-[#0B1F3A] p-8 shadow-xl sm:p-10">
+              <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-[#1F5EA8]/20" />
+
+              <div className="relative">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#1F5EA8] text-white">
+                  <School className="h-8 w-8" />
+                </div>
+
+                <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#63A4E8]">
+                  For School
+                </p>
+
+                <h3 className="mt-3 max-w-lg text-2xl font-bold text-white">
+                  Find Educators Who Match Your Needs
+                </h3>
+
+                <p className="mt-5 max-w-xl leading-8 text-slate-300">
+                  Tell us what you need and we help identify suitable
+                  educators from our network, reducing the time spent on the
+                  initial recruitment process.
+                </p>
+
+                <div className="mt-7 space-y-4">
+                  {[
+                    "Submit your teaching requirement",
+                    "Tell us about your school and role",
+                    "Review suitable candidate profiles",
+                    "Interview and select your preferred educator",
+                   
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-3 text-slate-200"
+                    >
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1F5EA8] text-white">
+                        <Check className="h-3.5 w-3.5" />
+                      </span>
+
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  to="/teachers"
+                  className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#1F5EA8] px-6 py-3.5 font-bold text-white transition hover:bg-[#174A85]"
+                >
+                  Learn More
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </div>
@@ -504,7 +505,7 @@ export default function Home() {
       {/* =========================================================
           HOW IT WORKS
       ========================================================= */}
-      <section className="bg-white py-20 sm:py-24">
+      {/* <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#1F5EA8]">
@@ -519,10 +520,10 @@ export default function Home() {
               We create a clear journey from recruitment to placement for
               both educators and schools.
             </p>
-          </div>
+          </div> */}
 
           {/* Educator Journey */}
-          <div className="mt-14">
+          {/* <div className="mt-14">
             <div className="mb-8 flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#1F5EA8]">
                 <GraduationCap className="h-6 w-6" />
@@ -567,10 +568,10 @@ export default function Home() {
                 );
               })}
             </div>
-          </div>
+          </div> */}
 
           {/* School Journey */}
-          <div className="mt-16">
+          {/* <div className="mt-16">
             <div className="mb-8 flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1F5EA8] text-white">
                 <School className="h-6 w-6" />
@@ -619,7 +620,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* =========================================================
           WHY ELEPHANT LEARNING
@@ -684,11 +685,11 @@ export default function Home() {
       {/* =========================================================
           OUR VISION
       ========================================================= */}
-      <section className="bg-[#F4F8FC] py-20 sm:py-24">
+      {/* <section className="bg-[#F4F8FC] py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
             {/* Content */}
-            <div>
+            {/* <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#1F5EA8]">
                 Our Vision
               </p>
@@ -716,10 +717,10 @@ export default function Home() {
                 Discover Our Vision
                 <ArrowRight className="h-5 w-5" />
               </Link>
-            </div>
+            </div> */} 
 
             {/* Vision Items */}
-            <div className="grid gap-4 sm:grid-cols-2">
+            {/* <div className="grid gap-4 sm:grid-cols-2">
               {visionItems.map((item, index) => (
                 <div
                   key={item}
@@ -737,10 +738,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Vision stats */}
-          <div className="mt-16 overflow-hidden rounded-3xl bg-[#0B1F3A] shadow-xl">
+          {/* <div className="mt-16 overflow-hidden rounded-3xl bg-[#0B1F3A] shadow-xl">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4">
               <div className="border-b border-white/10 p-8 text-center sm:border-r lg:border-b-0">
                 <p className="text-4xl font-black text-[#1F5EA8]">500</p>
@@ -774,7 +775,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* =========================================================
           FINAL CTA
@@ -787,7 +788,7 @@ export default function Home() {
           <div className="absolute -bottom-28 -left-24 h-64 w-64 rounded-full border border-white/5" />
 
           <div className="relative">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#1F5EA8]/10 text-[#63A4E8] ring-1 ring-[#1F5EA8]/30">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#1F5EA8]/10 text-[#DCE0E3] ring-1 ring-[#1F5EA8]/30">
               <MessageSquare className="h-7 w-7" />
             </div>
 
@@ -795,7 +796,7 @@ export default function Home() {
               Your Next Opportunity Starts Here
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl lg:text-2xl">
               Ready to Make the Connection?
             </h2>
 
@@ -805,7 +806,7 @@ export default function Home() {
               here to help.
             </p>
 
-            <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+            {/* <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
                 to="/teacher/register"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1F5EA8] px-7 py-4 font-bold text-white transition hover:bg-[#174A85]"
@@ -821,7 +822,7 @@ export default function Home() {
                 Find a Teacher
                 <School className="h-5 w-5" />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

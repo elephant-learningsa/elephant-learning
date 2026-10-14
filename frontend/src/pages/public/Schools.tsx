@@ -126,9 +126,10 @@ export default function ForSchools() {
                 For Schools & Education Providers
               </div>
 
-              <h1 className="mt-7 max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-[#1F5EA8] sm:text-5xl lg:text-5xl">
+              <h1 className="mt-7 max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-[#FFFFFF] sm:text-5xl lg:text-5xl">
                 Find the Right
-                <span className="block">
+                <span className="text-[#1F5EA8] block">
+               
                   Educator for Your School
                 </span>
               </h1>
@@ -147,11 +148,11 @@ export default function ForSchools() {
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <Link
-                  to="/school/request"
+                  to="/school/register"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-[#DCE0E3] px-7 py-3.5 font-bold text-[#1B3A5C] transition duration-300 hover:bg-[#5B6067] hover:text-[#DCE0E3] hover:shadow-lg hover:shadow-[#5B6067]/20"
 
                 >
-                  Find a Teacher
+                  Find an Educator
                   <ArrowRight size={19} />
                 </Link>
 
@@ -212,7 +213,7 @@ export default function ForSchools() {
                   </div>
 
                   {/* Floating card */}
-                  <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-md">
+                  {/* <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-md">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#] text-[#DCE0E3]">
                         <BadgeCheck size={21} />
@@ -228,7 +229,7 @@ export default function ForSchools() {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -240,11 +241,11 @@ export default function ForSchools() {
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                    <p className="text-xs font-semibold tracking-wide text-slate-400">
                       Talent Pool
                     </p>
                     <p className="text-sm font-bold text-[#0B1F3A]">
-                      Educators Ready to Connect
+                      Educators ready to connect
                     </p>
                   </div>
                 </div>
@@ -262,7 +263,7 @@ export default function ForSchools() {
               Why Schools Use Elephant Learning
             </span>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#0B1F3A] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#0B1F3A] sm:text-3xl">
               A More Structured Way to Find Educators
             </h2>
 
@@ -288,7 +289,7 @@ export default function ForSchools() {
                   </div>
 
                   <div className="relative">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#DCE0E3] transition duration-300 group-hover:bg-[#5B6067] group-hover:text-[#DCE0E3]">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B1F3A] text-[#DCE0E3] transition duration-300 group-hover:bg-[#0B1F3A] group-hover:text-[#DCE0E3]">
                       <Icon size={25} />
                     </div>
 
@@ -308,10 +309,10 @@ export default function ForSchools() {
       </section>
 
       {/* PROCESS */}
-      <section
+      {/* <section
         id="process"
         className="overflow-hidden bg-white py-20 lg:py-24"
-      >
+       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
@@ -327,13 +328,13 @@ export default function ForSchools() {
               communicate their needs, review suitable educators and move
               towards placement.
             </p>
-          </div>
+          </div> */}
 
           {/* DESKTOP PROCESS */}
-          <div className="mt-16 hidden lg:block">
-            <div className="relative">
+          {/* <div className="mt-16 hidden lg:block">
+            <div className="relative"> */}
               {/* Connecting line */}
-              <div className="absolute left-[8%] right-[8%] top-12 h-px bg-[#D4AF37]/40" />
+              {/* <div className="absolute left-[8%] right-[8%] top-12 h-px bg-[#D4AF37]/40" />
 
               <div className="grid grid-cols-6 gap-4">
                 {processSteps.map((step, index) => {
@@ -342,19 +343,19 @@ export default function ForSchools() {
                   return (
                     <div key={step.number} className="relative">
                       {/* Icon */}
-                      <div className="relative z-10 mx-auto flex h-24 w-24 items-center justify-center rounded-full border-8 border-white bg-[#0B1F3A] text-[#DCE0E3] shadow-lg">
+                      {/* <div className="relative z-10 mx-auto flex h-24 w-24 items-center justify-center rounded-full border-8 border-white bg-[#0B1F3A] text-[#DCE0E3] shadow-lg">
                         <Icon size={27} />
                       </div>
 
                       {/* Arrow */}
-                      {index < processSteps.length - 1 && (
+                      {/* {index < processSteps.length - 1 && (
                         <div className="absolute -right-3 top-9 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-[#5B6067] text-[#DCE0E3] shadow-md">
                           <ArrowRight size={14} />
                         </div>
-                      )}
+                      )}   */}
 
                       {/* Card */}
-                      <div className="mt-6 h-full rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:border-[#D4AF37]/40 hover:shadow-md">
+                      {/* <div className="mt-6 h-full rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 transition duration-300 hover:border-[#D4AF37]/40 hover:shadow-md">
                         <div className="text-xs font-bold tracking-widest text-[#5B6067]">
                           STEP {step.number}
                         </div>
@@ -372,10 +373,10 @@ export default function ForSchools() {
                 })}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* MOBILE PROCESS */}
-          <div className="mt-12 lg:hidden">
+          {/* <div className="mt-12 lg:hidden">
             <div className="relative ml-5 border-l-2 border-[#D4AF37]/30 pl-8">
               {processSteps.map((step, index) => {
                 const Icon = step.icon;
@@ -410,10 +411,10 @@ export default function ForSchools() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* REQUIREMENTS SECTION */}
-      <section className="bg-[#F8FAFC] py-20 lg:py-24">
+      <section className="bg-[#FFFFFF] py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             {/* VISUAL PANEL */}
@@ -431,7 +432,7 @@ export default function ForSchools() {
                     Start With Your Requirement
                   </p>
 
-                  <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl">
+                  <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-3xl">
                     The More We Know,
                     <span className="block text-[#DCE0E3]">
                       The Better We Can Match
@@ -474,7 +475,15 @@ export default function ForSchools() {
                       <p className="mt-3 text-sm font-semibold text-white">
                         Experience
                       </p>
+                      
                     </div>
+                    <Link
+                  to="/school/register"
+                  className="mt-7 inline-flex items-center gap-2 font-semibold text-[#FFFFFF] transition hover:text-[#63A4E8]"
+                >
+                  Find an Educator
+                  <ArrowRight size={17} />
+                </Link>
                   </div>
                 </div>
               </div>
@@ -486,7 +495,7 @@ export default function ForSchools() {
                 Tell Us What You Need
               </span>
 
-              <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-[#0B1F3A] sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-[#0B1F3A] sm:text-3xl">
                 Help Us Understand Your Requirement
               </h2>
 
@@ -516,52 +525,46 @@ export default function ForSchools() {
                 ))}
               </div>
 
-              <Link
-                to="/school/request"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#0B1F3A] px-7 py-3.5 font-bold text-white transition duration-300 hover:bg-[#132F4C] hover:shadow-lg"
-              >
-                Find a Teacher
-                <ArrowRight size={18} />
-              </Link>
+             
             </div>
           </div>
         </div>
       </section>
 
       {/* FINAL CTA */}
-      <section className="relative overflow-hidden bg-[#0B1F3A] py-20 lg:py-24">
+      {/* <section className="relative overflow-hidden bg-[#ffffff] py-20 lg:py-24"> */}
         {/* Decorative circles */}
-        <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full border border-[#D4AF37]/10" />
+        {/* <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full border border-[#D4AF37]/10" />
         <div className="absolute -bottom-40 -right-32 h-96 w-96 rounded-full border border-[#D4AF37]/10" />
 
         <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-8">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/20">
+           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#DCE0E3]/10 text-[#DCE0E3] ring-1 ring-[#DCE0E3]/20">
             <School size={30} />
-          </div>
+          </div> 
 
           <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#5B6067]">
             Ready to Get Started?
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1B3A5C] sm:text-4xl lg:text-4xl">
             Looking for the Right Educator?
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#5B6067]">
             Tell us about your teaching requirement and let Elephant Learning
             help you identify suitable educators from our network.
           </p>
 
-          <Link
+           <Link
             to="/school/request"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#DCE0E3] px-8 py-4 font-bold text-[#1B3A5C] transition duration-300 hover:bg-[#5B6067] hover:text-[#DCE0E3] hover:shadow-xl hover:shadow-[#5B6067]/20"
 
           >
-            Find a Teacher
+            Find an Educator
             <ArrowRight size={19} />
-          </Link>
+          </Link> 
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

@@ -17,6 +17,11 @@ import Contact from "../pages/public/Contact";
 // Authentication
 import Login from "../pages/auth/Login";
 import TeacherRegister from "../pages/auth/TeacherRegister";
+import SchoolRegister from "../pages/auth/SchoolRegister";
+
+// School
+import SchoolDashboard from "../pages/school/SchoolDashboard";
+import SchoolRequirements from "../pages/school/SchoolRequirements";
 
 // Teacher
 import TeacherDashboard from "../pages/teacher/TeacherDashboard";
@@ -46,19 +51,24 @@ export default function AppRoutes() {
         path="/teacher/register"
         element={<TeacherRegister />}
       />
+      <Route
+        path="/school/register"
+        element={<SchoolRegister />}
+      />
+
+      {/* School */}
+      <Route element={<ProtectedRoute allowedRoles={["SCHOOL"]} />}>
+        <Route path="/school/dashboard" element={<SchoolDashboard />} />
+        <Route path="/school/requirements" element={<SchoolRequirements />} />
+      </Route>
 
       {/* Teacher */}
-      <Route
-        element={
-          <ProtectedRoute allowedRoles={["TEACHER"]} />
-        }
-      >
+      <Route element={<ProtectedRoute allowedRoles={["TEACHER"]} />}>
         <Route element={<TeacherDashboardLayout />}>
           <Route
             path="/teacher/dashboard"
             element={<TeacherDashboard />}
           />
-
           <Route
             path="/teacher/profile"
             element={<TeacherProfile />}
@@ -67,17 +77,13 @@ export default function AppRoutes() {
       </Route>
 
       {/* Admin */}
-      <Route
-        element={
-          <ProtectedRoute allowedRoles={["ADMIN"]} />
-        }
-      >
+      <Route element={<ProtectedRoute allowedRoles={["ADMIN"]} />}>
         <Route element={<AdminDashboardLayout />}>
           <Route
             path="/admin/dashboard"
             element={<AdminDashboard />}
           />
-           <Route
+          <Route
             path="/admin/educators"
             element={<AdminEducators />}
           />

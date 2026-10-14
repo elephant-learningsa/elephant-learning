@@ -111,7 +111,7 @@ const processSteps = [
     number: "03",
     title: "Qualification Verification",
     description:
-      "Your relevant qualifications and submitted documentation are reviewed and verified.",
+      "Your qualifications and submitted documents are reviewed and verified to ensure they meet the required standards.",
     icon: ShieldCheck,
   },
   {
@@ -319,7 +319,7 @@ export default function ForTeachers() {
               Why Join Elephant Learning?
             </span>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#0B1F3A] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#0B1F3A] sm:text-3xl">
               More Than Just a Teaching Application
             </h2>
 
@@ -346,7 +346,7 @@ export default function ForTeachers() {
 
                   <div className="relative">
 
-                    <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-[#EAF3FC] text-[#1F5EA8] transition duration-300 group-hover:bg-[#1F5EA8] group-hover:text-white">
+                    <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-[#1F5EA8] text-[#FFFFFF] transition duration-300 group-hover:bg-[#1F5EA8] group-hover:text-white">
                       <Icon size={24} />
                     </div>
 
@@ -416,7 +416,7 @@ export default function ForTeachers() {
 
                 <Link
                   to="/teacher/register"
-                  className="mt-7 inline-flex items-center gap-2 font-semibold text-[#63A4E8] transition hover:text-white"
+                  className="mt-7 inline-flex items-center gap-2 font-semibold text-[#FFFFFF] transition hover:text-[#63A4E8]"
                 >
                   Create Your Profile
                   <ArrowRight size={17} />
@@ -437,7 +437,7 @@ export default function ForTeachers() {
                     className="group rounded-2xl border border-[#D8E6F3] bg-[#F8FBFE] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#1F5EA8]/40 hover:bg-white hover:shadow-lg"
                   >
 
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#EAF3FC] text-[#1F5EA8] transition group-hover:bg-[#1F5EA8] group-hover:text-white">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#1F5EA8] text-[#FFFFFF] transition group-hover:bg-[#1F5EA8] group-hover:text-white">
                       <Icon size={22} />
                     </div>
 
@@ -526,15 +526,15 @@ export default function ForTeachers() {
 
             </div>
 
-            <div className="my-10 flex justify-center">
-
-              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#1F5EA8]/40 bg-white text-[#1F5EA8] shadow-sm">
+            
+            <div className="relative my-10 h-11">
+              <div className="absolute left-[80.5%] flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border border-[#1F5EA8]/40 bg-white text-[#1F5EA8] shadow-sm">
                 <ArrowRight className="rotate-90" size={19} />
               </div>
-
             </div>
 
-            <div className="absolute bottom-[calc(50%-1px)] left-[6%] right-[6%] h-px bg-[#1F5EA8]/30" />
+
+            <div className="absolute bottom-[calc(37%-1px)] left-[6%] right-[6%] h-px bg-[#1F5EA8]/30" />
 
             <div className="grid grid-cols-4 gap-7">
 
@@ -616,7 +616,7 @@ export default function ForTeachers() {
       {/* =========================================================
           FINAL CTA
       ========================================================= */}
-      <section className="relative overflow-hidden bg-[#0B1F3A] py-20 lg:py-24">
+      {/* <section className="relative overflow-hidden bg-[#0B1F3A] py-20 lg:py-24">
 
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1F3A] via-[#123D68] to-[#1F5EA8]" />
 
@@ -626,9 +626,9 @@ export default function ForTeachers() {
 
         <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-8">
 
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#1F5EA8] text-white ring-1 ring-[#63A4E8]/50">
+           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#1F5EA8] text-white ring-1 ring-[#63A4E8]/50">
             <GraduationCap size={32} />
-          </div>
+          </div> 
 
           <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#63A4E8]">
             Start Your Journey
@@ -653,10 +653,10 @@ export default function ForTeachers() {
               size={19}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
-          </Link>
+          </Link> 
 
         </div>
-      </section>
+      </section> */}
 
     </main>
   );

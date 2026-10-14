@@ -92,7 +92,7 @@ export default function Footer() {
                 to="/about"
                 className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
-                About Us
+                About
               </Link>
 
               <Link
@@ -130,7 +130,7 @@ export default function Footer() {
           ===================================================== */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6EA8E8]">
-              For Educators
+              Quick Links
             </h3>
 
             <div className="mt-6 flex flex-col gap-4">
@@ -142,23 +142,23 @@ export default function Footer() {
               </Link>
 
               <Link
-                to="/teacher/login"
+                to="/school/register"
                 className="text-sm text-white/60 transition hover:text-[#6EA8E8]"
               >
-                Educator Login
+                Find an Educator
               </Link>
 
-              <Link
+              {/* <Link
                 to="/teacher/register"
                 className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-[#1F5EA8] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#2E73C5]"
-              >
+               >
                 Join Our Talent Pool
 
                 <ArrowUpRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

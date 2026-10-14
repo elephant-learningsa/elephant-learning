@@ -56,12 +56,12 @@ export default function Navbar() {
             </NavLink>
           ))}
 
-          {/* Join Our Talent Pool */}
+          {/* Join Our Teacher Network */}
           <Link
             to="/teacher/register"
             className="rounded-full bg-[#1F5EA8] px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-sm transition duration-300 hover:bg-[#2E73C5] hover:shadow-md"
           >
-            Join Our Talent Pool
+            Join Our Teacher Network
           </Link>
         </nav>
 
@@ -104,7 +104,7 @@ export default function Navbar() {
               onClick={closeMobileMenu}
               className="mt-5 rounded-full bg-[#1F5EA8] px-6 py-4 text-center text-sm font-semibold tracking-wide text-white shadow-sm transition duration-300 hover:bg-[#2E73C5] hover:shadow-md"
             >
-              Join Our Talent Pool
+              Join Our Teacher Network
             </Link>
           </nav>
         </div>

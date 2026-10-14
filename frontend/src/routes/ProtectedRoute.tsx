@@ -4,6 +4,10 @@ interface ProtectedRouteProps {
   allowedRoles?: string[];
 }
 
+interface StoredUser {
+  role?: string;
+}
+
 export default function ProtectedRoute({
   allowedRoles,
 }: ProtectedRouteProps) {
@@ -15,26 +19,39 @@ export default function ProtectedRoute({
     localStorage.getItem("user") ||
     sessionStorage.getItem("user");
 
+  // Require authentication
   if (!accessToken || !storedUser) {
     return <Navigate to="/login" replace />;
   }
 
-  let user;
+  let user: StoredUser;
 
   try {
     user = JSON.parse(storedUser);
   } catch {
     localStorage.removeItem("user");
     sessionStorage.removeItem("user");
+    localStorage.removeItem("access");
+    sessionStorage.removeItem("access");
 
     return <Navigate to="/login" replace />;
   }
 
-  if (
-    allowedRoles &&
-    !allowedRoles.includes(user.role)
-  ) {
-    return <Navigate to="/login" replace />;
+  // Check the user's role
+  if (allowedRoles && !allowedRoles.includes(user.role ?? "")) {
+    switch (user.role) {
+      case "SCHOOL":
+        return <Navigate to="/school/dashboard" replace />;
+
+      case "TEACHER":
+        return <Navigate to="/teacher/dashboard" replace />;
+
+      case "ADMIN":
+        return <Navigate to="/admin/dashboard" replace />;
+
+      default:
+        return <Navigate to="/login" replace />;
+    }
   }
 
   return <Outlet />;
